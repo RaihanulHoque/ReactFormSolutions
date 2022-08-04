@@ -3,7 +3,6 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import './assets/style.css'
 import LuckPointSet from './components/LuckPointSet'
-import PlayerChallenge from './components/PlayerChallenge'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,7 +14,6 @@ function App() {
         <div className="blog_post">
           <div className="container_copy">
             <LuckPointSet />
-            <PlayerChallenge />  
           </div>
           
           </div>
