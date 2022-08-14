@@ -193,7 +193,7 @@ export default function ControlledForm() {
                     </div>
                     <p style={{ color:"red", fontSize:".9rem", margin:0, padding:0 }}>{errors.profession}</p>
 
-                    <button>Submit</button> 
+                    <button className='mt-3'>Submit</button> 
                 </form>
             )
         }

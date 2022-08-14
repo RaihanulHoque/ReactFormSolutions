@@ -2,20 +2,33 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import './assets/style.css'
-import ControlledForm from './components/ControlledForm'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './components/Home'
+import About from './components/About'
+import FormSolutions from './components/FormSolutions'
+import Contact from './components/Contact'
+import MainNav from './components/MainNav'
+import Carrier from './components/Carrier'
+import NotFound from './components/NotFound'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App" style={{ width:"1250px", textAlign:"center" }}> 
-        <h2 className='app-heading'>Form Solutions with React</h2>
-        <div className="blog_post" style={{ margin:"0 auto" }}>
-            <div className="container_copy">
-                <ControlledForm />
-            </div>  
-        </div>
-    </div>
+    <BrowserRouter>
+      <MainNav />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path='/about' element={<About />}>
+            <Route path='carrier' element={<Carrier />} />
+            
+        </Route>
+
+        <Route path='/form-solutions' element={<FormSolutions header={'Form Solutions with React'} />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+         
   )
 }
 
