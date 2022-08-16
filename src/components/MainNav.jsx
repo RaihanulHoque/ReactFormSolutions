@@ -12,7 +12,7 @@ export default function MainNav() {
     
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="#">React Router DOM Solution</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -25,6 +25,9 @@ export default function MainNav() {
 
             <NavDropdown title="About" id="navbarScrollingDropdown">
               <NavLink to="about" className='nav-link dropdown-item'>About Us</NavLink>
+              <NavLink to="about/carrier" className='nav-link dropdown-item'>
+                Company
+              </NavLink>
               <NavLink to="about/carrier" className='nav-link dropdown-item'>
                 Carrier
               </NavLink>

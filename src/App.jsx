@@ -9,6 +9,7 @@ import FormSolutions from './components/FormSolutions'
 import Contact from './components/Contact'
 import MainNav from './components/MainNav'
 import Carrier from './components/Carrier'
+import Company from './components/Company'
 import NotFound from './components/NotFound'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path='/about' element={<About />}>
+            <Route path='company/:name' element={<Company />} />
             <Route path='carrier' element={<Carrier />} />
             
         </Route>
